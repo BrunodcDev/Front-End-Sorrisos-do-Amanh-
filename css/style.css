@@ -1,0 +1,343 @@
+/* ============================
+   🎨 SISTEMA DE DESIGN
+============================ */
+:root {
+  /* 🎨 Paleta de Cores (8 cores) */
+  --cor-primaria: #2b6ca3;
+  --cor-primaria-clara: #4f8cc8;
+  --cor-secundaria: #ffd43b;
+  --cor-secundaria-escura: #f3c020;
+  --cor-sucesso: #4caf50;
+  --cor-erro: #e53935;
+  --cor-neutra-100: #ffffff;
+  --cor-neutra-200: #f9fafb;
+  --cor-neutra-300: #e5e7eb;
+  --cor-neutra-700: #333333;
+  --cor-neutra-900: #111827;
+
+  /* 🔤 Tipografia (5 tamanhos) */
+  --font-xs: 0.875rem; /* 14px */
+  --font-sm: 1rem;     /* 16px */
+  --font-md: 1.25rem;  /* 20px */
+  --font-lg: 1.5rem;   /* 24px */
+  --font-xl: 2rem;     /* 32px */
+
+  /* 📏 Espaçamento modular */
+  --esp-1: 8px;
+  --esp-2: 16px;
+  --esp-3: 24px;
+  --esp-4: 32px;
+  --esp-5: 48px;
+  --esp-6: 64px;
+
+  /* 🧩 Layout Grid */
+  --colunas: 12;
+  --gap: 20px;
+}
+
+/* ============================
+   🌍 ESTILOS GERAIS
+============================ */
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: var(--cor-neutra-200);
+  color: var(--cor-neutra-900);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ============================
+   🧭 CABEÇALHO + MENU
+============================ */
+header {
+  background-color: var(--cor-secundaria);
+  padding: var(--esp-3) 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: var(--font-xl);
+  color: var(--cor-neutra-900);
+}
+
+/* Navegação Desktop */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: var(--esp-2);
+  padding: 0;
+  margin: var(--esp-2) 0;
+}
+
+nav a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-sm);
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--cor-primaria-clara);
+}
+
+/* Dropdown */
+nav li {
+  position: relative;
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+  background: var(--cor-neutra-100);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: var(--esp-1) 0;
+  border-radius: 6px;
+}
+
+nav li:hover ul {
+  display: block;
+}
+
+nav li ul li {
+  padding: var(--esp-1) var(--esp-2);
+}
+
+nav li ul li a {
+  color: var(--cor-neutra-900);
+}
+
+/* ============================
+   📱 MENU MOBILE
+============================ */
+.menu-mobile {
+  display: none;
+  background: var(--cor-secundaria);
+  padding: var(--esp-2);
+}
+
+.menu-mobile button {
+  background: none;
+  border: none;
+  font-size: var(--font-lg);
+  cursor: pointer;
+  color: var(--cor-primaria);
+}
+
+/* ============================
+   🏗️ LAYOUT PRINCIPAL (GRID)
+============================ */
+main {
+  display: grid;
+  grid-template-columns: repeat(var(--colunas), 1fr);
+  gap: var(--gap);
+  padding: var(--esp-4);
+}
+
+section {
+  grid-column: 2 / span 10;
+  background: var(--cor-neutra-100);
+  border-radius: 10px;
+  padding: var(--esp-4);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  margin-bottom: var(--esp-4);
+}
+
+h2 {
+  font-size: var(--font-lg);
+  color: var(--cor-primaria);
+  margin-bottom: var(--esp-2);
+}
+
+/* ============================
+   💳 CARDS DE PROJETOS
+============================ */
+.projeto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cor-neutra-100);
+  border-radius: 10px;
+  padding: var(--esp-3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.projeto:hover {
+  transform: translateY(-5px);
+}
+
+/* ============================
+   🧱 BOTÕES
+============================ */
+.botao, button, input[type="submit"] {
+  background: var(--cor-primaria);
+  color: var(--cor-neutra-100);
+  border: none;
+  padding: var(--esp-2) var(--esp-3);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botao:hover,
+button:hover,
+input[type="submit"]:hover {
+  background: var(--cor-primaria-clara);
+}
+
+.botao-secundario {
+  background: var(--cor-secundaria);
+  color: var(--cor-neutra-900);
+}
+
+.botao-secundario:hover {
+  background: var(--cor-secundaria-escura);
+}
+
+/* ============================
+   🧾 FORMULÁRIOS
+============================ */
+form {
+  background: var(--cor-neutra-100);
+  padding: var(--esp-4);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: var(--esp-2);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: var(--esp-2);
+  margin-top: var(--esp-1);
+  border: 1px solid var(--cor-neutra-300);
+  border-radius: 6px;
+  font-size: var(--font-sm);
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--cor-primaria);
+  outline: none;
+}
+
+/* Mensagens de feedback */
+.sucesso {
+  background: var(--cor-sucesso);
+  color: #fff;
+  padding: var(--esp-2);
+  border-radius: 6px;
+  text-align: center;
+  margin-top: var(--esp-2);
+}
+
+.erro {
+  background: var(--cor-erro);
+  color: #fff;
+  padding: var(--esp-2);
+  border-radius: 6px;
+  text-align: center;
+  margin-top: var(--esp-2);
+}
+
+/* ============================
+   🏷️ BADGES e TAGS
+============================ */
+.badge {
+  display: inline-block;
+  background: var(--cor-secundaria);
+  color: var(--cor-neutra-900);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: var(--font-xs);
+  font-weight: 600;
+  margin: 4px;
+}
+
+/* ============================
+   ⚙️ RODAPÉ
+============================ */
+footer {
+  background: var(--cor-primaria);
+  color: var(--cor-neutra-100);
+  text-align: center;
+  padding: var(--esp-3);
+  font-size: var(--font-sm);
+}
+
+/* ============================
+   📱 RESPONSIVIDADE
+============================ */
+@media (max-width: 1200px) {
+  section {
+    grid-column: 1 / span 12;
+  }
+}
+
+@media (max-width: 992px) {
+  nav ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-mobile {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--cor-neutra-100);
+    padding: var(--esp-2);
+  }
+
+  nav ul.ativo {
+    display: flex;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    padding: var(--esp-3);
+  }
+
+  .projeto {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: var(--font-lg);
+  }
+
+  h2 {
+    font-size: var(--font-md);
+  }
+}
+
+@media (max-width: 400px) {
+  .botao, button {
+    font-size: var(--font-xs);
+    padding: var(--esp-1) var(--esp-2);
+  }
+}

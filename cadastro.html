@@ -4,11 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seja Voluntário - Sorrisos do Amanhã</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
   <header>
     <h1>Sorrisos do Amanhã</h1>
     <p>Projetos que transformam o futuro de nossas crianças</p>
+    <!-- Menu Mobile -->
+    <div class="menu-mobile">
+      <button id="btnMenu">☰ Menu</button>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
@@ -24,7 +30,7 @@
       <p>Faça parte do <strong>Sorrisos do Amanhã</strong> e ajude a transformar vidas com o seu tempo, talento e dedicação.  
       Preencha o formulário abaixo e entraremos em contato o mais breve possível!</p>
 
-      <form action="#" method="post" class="form-voluntario">
+      <form id="form-voluntario" class="form-voluntario">
         <fieldset>
           <legend>Informações Pessoais</legend>
 
@@ -65,29 +71,33 @@
             <option value="PE">Pernambuco</option>
             <option value="SP">São Paulo</option>
             <option value="RJ">Rio de Janeiro</option>
-            <!-- Pode adicionar mais estados -->
           </select>
         </fieldset>
 
         <fieldset>
           <legend>Disponibilidade</legend>
 
-          <label for="dias">Quais dias da semana você pode ajudar?</label>
-          <select id="dias" name="dias" multiple>
-            <option>Segunda-feira</option>
-            <option>Terça-feira</option>
-            <option>Quarta-feira</option>
-            <option>Quinta-feira</option>
-            <option>Sexta-feira</option>
-            <option>Sábado</option>
-            <option>Domingo</option>
-          </select>
+          <label>Quais dias da semana você pode ajudar?</label>
+          <div class="dias-semana">
+            <label>Segunda-feira<input type="checkbox" name="dias[]" value="Segunda-feira"></label>
+            <label>Terça-feira<input type="checkbox" name="dias[]" value="Terça-feira"></label>
+            <label>Quarta-feira<input type="checkbox" name="dias[]" value="Quarta-feira"></label>
+            <label>Quinta-feira<input type="checkbox" name="dias[]" value="Quinta-feira"></label>
+            <label>Sexta-feira<input type="checkbox" name="dias[]" value="Sexta-feira"></label>
+            <label>Sábado<input type="checkbox" name="dias[]" value="Sábado"></label>
+            <label>Domingo<input type="checkbox" name="dias[]" value="Domingo"></label>
+          </div>
 
           <label for="mensagem">Conte-nos um pouco sobre você:</label>
           <textarea id="mensagem" name="mensagem" rows="4" placeholder="Por que deseja ser voluntário?"></textarea>
         </fieldset>
 
         <button type="submit">Enviar Cadastro</button>
+
+        <!-- Mensagem de sucesso -->
+        <p id="mensagem-sucesso" class="sucesso" style="display: none;">
+          ✅ Cadastro enviado com sucesso! Entraremos em contato em breve.
+        </p>
       </form>
     </section>
   </main>
@@ -95,5 +105,6 @@
   <footer>
     <p>&copy; 2025 Sorrisos do Amanhã | Todos os direitos reservados.</p>
   </footer>
+  <script src="js/JavaScript.js"></script>
 </body>
 </html>

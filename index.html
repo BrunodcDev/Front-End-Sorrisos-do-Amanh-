@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sorrisos do Amanhã - Transformando vidas com amor e esperança</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -12,11 +13,22 @@
     <h1>Sorrisos do Amanhã</h1>
     <p>Transformando vidas com amor, educação e esperança</p>
 
+    <!-- Botão de menu mobile -->
+  <div class="menu-mobile">
+    <button id="btnMenu">☰ Menu</button>
+  </div>
+
     <!-- Menu de navegação -->
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="projetos.html">Projetos</a>
+          <ul>
+            <li><a href="#">Educação</a></li>
+            <li><a href="#">Cultura</a></li>
+            <li><a href="#">Alimentação</a></li>
+          </ul>
+        </li>
         <li><a href="cadastro.html">Seja Voluntário</a></li>
       </ul>
     </nav>
@@ -27,33 +39,39 @@
     <!-- Seção de destaque -->
     <section id="sobre">
       <h2>Quem Somos</h2>
-      <p>A <strong>Sorrisos do Amanhã</strong> é uma organização sem fins lucrativos dedicada a proporcionar um futuro melhor para crianças em situação de vulnerabilidade social. Atuamos com projetos de educação, alimentação e atividades culturais, buscando levar esperança e oportunidades para cada sorriso.</p>
+      <p>
+        A <strong>Sorrisos do Amanhã</strong> é uma organização sem fins lucrativos dedicada a proporcionar um futuro melhor
+        para crianças em situação de vulnerabilidade social. Atuamos com projetos de educação, alimentação e atividades culturais,
+        buscando levar esperança e oportunidades para cada sorriso.
+      </p>
       <img src="img/criancas-sorrindo.png" alt="Crianças sorrindo em um projeto social">
+      <a href="projetos.html" class="botao">Conheça nossos projetos</a>
     </section>
 
     <!-- Seção Missão, Visão e Valores -->
     <section id="valores">
       <h2>Missão, Visão e Valores</h2>
+      <div class="grid-valores">
+        <article class="card">
+          <h3>Missão</h3>
+          <p>Promover o desenvolvimento integral de crianças por meio da educação, cultura e solidariedade.</p>
+        </article>
 
-      <article>
-        <h3>Missão</h3>
-        <p>Promover o desenvolvimento integral de crianças por meio da educação, cultura e solidariedade.</p>
-      </article>
+        <article class="card">
+          <h3>Visão</h3>
+          <p>Ser reconhecida como uma ONG modelo em ações transformadoras que garantem um futuro digno e feliz para as crianças.</p>
+        </article>
 
-      <article>
-        <h3>Visão</h3>
-        <p>Ser reconhecida como uma ONG modelo em ações transformadoras que garantem um futuro digno e feliz para as crianças.</p>
-      </article>
-
-      <article>
-        <h3>Valores</h3>
-        <ul>
-          <li>Amor e empatia</li>
-          <li>Respeito e igualdade</li>
-          <li>Transparência</li>
-          <li>Comprometimento social</li>
-        </ul>
-      </article>
+        <article class="card">
+          <h3>Valores</h3>
+          <ul>
+            <li>💛 Amor e empatia</li>
+            <li>🤝 Respeito e igualdade</li>
+            <li>🔍 Transparência</li>
+            <li>🌱 Comprometimento social</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
     <!-- Seção de Contato -->
@@ -63,11 +81,11 @@
       <p><strong>E-mail:</strong> contato@sorrisosdoamanha.org</p>
       <p><strong>Telefone:</strong> (79) 99665-1658</p>
 
-      <p>Siga-nos nas redes sociais:</p>
-      <ul>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Facebook</a></li>
-      </ul>
+      <div class="redes">
+        <p>Siga-nos nas redes sociais:</p>
+        <a href="#" class="botao-secundario">Instagram</a>
+        <a href="#" class="botao-secundario">Facebook</a>
+      </div>
     </section>
   </main>
 
@@ -75,6 +93,6 @@
   <footer>
     <p>&copy; 2025 Sorrisos do Amanhã. Todos os direitos reservados.</p>
   </footer>
-
+   <script src="js/JavaScript.js"></script>
 </body>
 </html>
