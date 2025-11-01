@@ -1,9 +1,3 @@
-
-## 🎯 **5. ATUALIZE SEU README.md**
-
-**Adicione esta seção ao seu README existente:**
-
-```markdown
 ## 🚀 Otimização para Produção
 
 ### Arquivos Minificados:
