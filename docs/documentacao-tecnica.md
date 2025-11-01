@@ -47,7 +47,6 @@ Front-End-Sorrisos-do-Amanh-/
 ## 🔧 Scripts de Build
 
 ### Minificação CSS:
-```bash
 # Manual (online)
 # https://cssminifier.com/
 
