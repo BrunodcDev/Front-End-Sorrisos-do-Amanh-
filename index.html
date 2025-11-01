@@ -1,98 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sorrisos do Amanhã - Transformando vidas com amor e esperança</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sorrisos do Amanhã — Transformando vidas</title>
+    <meta
+      name="description"
+      content="Sorrisos do Amanhã — ONG dedicada a educação, alimentação e cultura para crianças."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div
+        class="top-inner"
+        role="banner"
+        aria-label="Cabeçalho Sorrisos do Amanhã"
+      >
+        <div class="brand">
+          <a href="#/" aria-label="Início"><h1>Sorrisos do Amanhã</h1></a>
+          <p class="small">Transformando o futuro com amor e educação</p>
+        </div>
 
-  <!-- Cabeçalho -->
-  <header>
-    <h1>Sorrisos do Amanhã</h1>
-    <p>Transformando vidas com amor, educação e esperança</p>
-
-    <!-- Botão de menu mobile -->
-  <div class="menu-mobile">
-    <button id="btnMenu">☰ Menu</button>
-  </div>
-
-    <!-- Menu de navegação -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a>
-          <ul>
-            <li><a href="#">Educação</a></li>
-            <li><a href="#">Cultura</a></li>
-            <li><a href="#">Alimentação</a></li>
-          </ul>
-        </li>
-        <li><a href="cadastro.html">Seja Voluntário</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Conteúdo principal -->
-  <main>
-    <!-- Seção de destaque -->
-    <section id="sobre">
-      <h2>Quem Somos</h2>
-      <p>
-        A <strong>Sorrisos do Amanhã</strong> é uma organização sem fins lucrativos dedicada a proporcionar um futuro melhor
-        para crianças em situação de vulnerabilidade social. Atuamos com projetos de educação, alimentação e atividades culturais,
-        buscando levar esperança e oportunidades para cada sorriso.
-      </p>
-      <img src="img/criancas-sorrindo.png" alt="Crianças sorrindo em um projeto social">
-      <a href="projetos.html" class="botao">Conheça nossos projetos</a>
-    </section>
-
-    <!-- Seção Missão, Visão e Valores -->
-    <section id="valores">
-      <h2>Missão, Visão e Valores</h2>
-      <div class="grid-valores">
-        <article class="card">
-          <h3>Missão</h3>
-          <p>Promover o desenvolvimento integral de crianças por meio da educação, cultura e solidariedade.</p>
-        </article>
-
-        <article class="card">
-          <h3>Visão</h3>
-          <p>Ser reconhecida como uma ONG modelo em ações transformadoras que garantem um futuro digno e feliz para as crianças.</p>
-        </article>
-
-        <article class="card">
-          <h3>Valores</h3>
-          <ul>
-            <li>💛 Amor e empatia</li>
-            <li>🤝 Respeito e igualdade</li>
-            <li>🔍 Transparência</li>
-            <li>🌱 Comprometimento social</li>
-          </ul>
-        </article>
+        <div class="menu-mobile">
+          <button class="menu-btn" aria-label="Abrir menu">☰</button>
+        </div>
       </div>
-    </section>
 
-    <!-- Seção de Contato -->
-    <section id="contato">
-      <h2>Entre em Contato</h2>
-      <p><strong>Endereço:</strong> Rua das Flores, 123 - Aracaju/SE</p>
-      <p><strong>E-mail:</strong> contato@sorrisosdoamanha.org</p>
-      <p><strong>Telefone:</strong> (79) 99665-1658</p>
+      <nav role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="#/">Início</a></li>
+          <li><a href="#/projetos">Projetos</a></li>
+          <li><a href="#/cadastro">Seja Voluntário</a></li>
+          <li><a href="#/admin">Admin</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <div class="redes">
-        <p>Siga-nos nas redes sociais:</p>
-        <a href="#" class="botao-secundario">Instagram</a>
-        <a href="#" class="botao-secundario">Facebook</a>
+    <main id="conteudo" role="main" aria-live="polite">
+      <!-- Conteúdo será carregado via JavaScript -->
+      <section class="hero">
+        <div class="hero-card">
+          <h2>Transforme vidas com um sorriso</h2>
+          <p>
+            Na <strong>Sorrisos do Amanhã</strong> promovemos educação,
+            alimentação e atividades culturais para crianças em situação de
+            vulnerabilidade.
+          </p>
+          <div class="cta-row">
+            <a href="#/cadastro" class="botao">Seja voluntário</a>
+            <a href="#/projetos" class="botao-secundario"
+              >Conheça os projetos</a
+            >
+          </div>
+        </div>
+        <div class="hero-img">
+          <img
+            src="img/criancas-sorrindo.png"
+            alt="Crianças sorrindo em projeto social"
+          />
+        </div>
+      </section>
+
+      <div class="grid-destaque">
+        <div class="card">
+          <h3>Voluntariado</h3>
+          <p>
+            Participe das nossas ações educativas, culturais e de apoio
+            alimentar.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Doações</h3>
+          <p>
+            Suas contribuições mantêm nossas atividades e ampliam nosso alcance.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Transparência</h3>
+          <p>
+            Prestamos contas e divulgamos relatórios de impacto e uso de
+            recursos.
+          </p>
+        </div>
       </div>
-    </section>
-  </main>
+    </main>
 
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 Sorrisos do Amanhã. Todos os direitos reservados.</p>
-  </footer>
-   <script src="js/JavaScript.js"></script>
-</body>
+    <footer role="contentinfo">
+      <p>&copy; 2025 Sorrisos do Amanhã. Todos os direitos reservados.</p>
+    </footer>
+
+    <noscript>
+      <div class="no-js">
+        Este site funciona melhor com JavaScript habilitado.
+      </div>
+    </noscript>
+
+    <script src="js/app.js" defer></script>
+  </body>
 </html>
